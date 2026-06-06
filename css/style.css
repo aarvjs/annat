@@ -23,7 +23,7 @@
 
     /* Fonts */
     --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    
+
     /* Layout Constants */
     --max-width: 1440px;
     --container-padding: 0 40px;
@@ -31,12 +31,12 @@
     --border-radius-md: 12px;
     --border-radius-lg: 24px;
     --border-radius-xl: 30px;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-    
+
     /* Transitions */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -44,7 +44,9 @@
 }
 
 /* 2. Global Resets & Base Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -71,7 +73,10 @@ a {
     transition: var(--transition-fast);
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -85,7 +90,8 @@ button {
     transition: var(--transition-fast);
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -141,14 +147,14 @@ img {
 .logo {
     display: inline-flex;
     align-items: center;
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 32px;
+    font-weight: 400;
     letter-spacing: -0.5px;
 }
 
 .logo-bold {
-    font-weight: 800;
-    font-style: italic;
+    font-weight: 600;
+    /* font-style: italic; */
 }
 
 .logo-light {
@@ -345,14 +351,9 @@ img {
 .hero-image {
     max-height: 480px;
     object-fit: contain;
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
-    animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-}
+
 
 /* 5. Menu Cards Grid (Home Kitchen) */
 .home-kitchen {
@@ -393,7 +394,8 @@ img {
 .card-img-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 66.67%; /* 3:2 Aspect Ratio */
+    padding-top: 66.67%;
+    /* 3:2 Aspect Ratio */
     overflow: hidden;
     background-color: var(--bg-light);
 }
@@ -408,7 +410,18 @@ img {
     transition: var(--transition-slow);
 }
 
-.menu-card:hover .card-img {
+.card-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.menu-card:hover .card-img,
+.menu-card:hover .card-video {
     transform: scale(1.08);
 }
 
@@ -422,7 +435,7 @@ img {
     border-radius: var(--border-radius-sm);
     color: var(--text-main);
     z-index: 5;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .badge-discount {
@@ -526,7 +539,8 @@ img {
 
 .carousel-wrapper {
     position: relative;
-    max-width: 1080px; /* Width for 3 cards + spacing */
+    max-width: 1080px;
+    /* Width for 3 cards + spacing */
     margin: 40px auto 30px auto;
     display: flex;
     align-items: center;
@@ -546,7 +560,8 @@ img {
 }
 
 .carousel-slide {
-    flex: 0 0 calc((100% - 60px) / 3); /* exactly 3 cards with 30px gap */
+    flex: 0 0 calc((100% - 60px) / 3);
+    /* exactly 3 cards with 30px gap */
     max-width: calc((100% - 60px) / 3);
 }
 
@@ -689,7 +704,8 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 6px solid var(--white);
-    padding-top: 56.25%; /* 16:9 ratio */
+    padding-top: 56.25%;
+    /* 16:9 ratio */
     background-color: var(--bg-light);
 }
 
@@ -714,7 +730,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     z-index: 10;
     transition: var(--transition-fast);
 }
@@ -722,7 +738,7 @@ img {
 .video-play-btn:hover {
     background-color: var(--primary-hover);
     transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
 }
 
 .play-icon-shape {
@@ -865,93 +881,99 @@ textarea.form-control {
 
 /* 9. Footer */
 .footer {
-    background-color: #1A1A24;
+    background-color: var(--primary);
     color: var(--white);
-    padding: 60px 0 20px 0;
-    border-top: 4px solid var(--primary);
+    padding: 40px 0 60px 0;
+    border-top: none;
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 80px;
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.footer-brand {
-    max-width: 300px;
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
 }
 
 .footer-logo {
     color: var(--white);
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 0;
 }
 
-.footer-about {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-.footer-links-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.footer-col-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.footer-nav-col ul {
+.footer-center {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-nav-col a {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.footer-nav-col a:hover {
-    color: var(--primary);
-    padding-left: 4px;
-}
-
-.social-links {
+.footer-nav-list {
     display: flex;
-    gap: 12px;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.social-links a {
+.footer-nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--white);
+    transition: opacity var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+    opacity: 0.85;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-links a {
     width: 36px;
     height: 36px;
-    background-color: rgba(255,255,255,0.05);
-    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--primary);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--white);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-.social-links a:hover {
-    background-color: var(--primary);
-    color: var(--white);
-    transform: translateY(-3px);
+.footer-social-links a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+.footer-social-links a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin: 0;
 }
 
 /* 10. Modals System */
@@ -1051,7 +1073,8 @@ textarea.form-control {
 
 .video-aspect-ratio {
     position: relative;
-    padding-top: 56.25%; /* 16:9 */
+    padding-top: 56.25%;
+    /* 16:9 */
     background-color: #000;
 }
 
@@ -1066,7 +1089,7 @@ textarea.form-control {
 
 .video-modal-container .modal-close {
     color: var(--white);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -1331,6 +1354,7 @@ textarea.form-control {
         opacity: 0;
         transform: translateY(20px) scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -1346,6 +1370,7 @@ textarea.form-control {
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(-20px);
