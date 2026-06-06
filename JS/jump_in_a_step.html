@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jump Game IV Visualizer</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .array {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: lightgray;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .active {
+      background: orange;
+      color: white;
+    }
+
+    .visited {
+      background: green;
+      color: white;
+    }
+
+    .target {
+      background: red;
+      color: white;
+    }
+
+    #steps {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Jump Game IV (BFS Visualization)</h2>
+
+<input id="input" placeholder="Enter array e.g. 100,-23,-23,404,100">
+<button onclick="start()">Start BFS</button>
+
+<div class="array" id="array"></div>
+
+<div id="steps"></div>
+
+<script>
+async function start() {
+    let arr = document.getElementById("input").value.split(",").map(Number);
+    let n = arr.length;
+
+    let container = document.getElementById("array");
+    container.innerHTML = "";
+
+    // create boxes
+    arr.forEach((val, i) => {
+        let div = document.createElement("div");
+        div.className = "box";
+        div.innerText = val;
+        div.id = "box-" + i;
+        if (i === n - 1) div.classList.add("target");
+        container.appendChild(div);
+    });
+
+    const map = new Map();
+    for (let i = 0; i < n; i++) {
+        if (!map.has(arr[i])) map.set(arr[i], []);
+        map.get(arr[i]).push(i);
+    }
+
+    let queue = [0];
+    let visited = new Set([0]);
+    let steps = 0;
+
+    while (queue.length > 0) {
+        let size = queue.length;
+
+        for (let i = 0; i < size; i++) {
+            let curr = queue.shift();
+
+            highlight(curr, "active");
+            await sleep(500);
+
+            if (curr === n - 1) {
+                document.getElementById("steps").innerText = "Steps: " + steps;
+                return;
+            }
+
+            // i + 1
+            if (curr + 1 < n && !visited.has(curr + 1)) {
+                visited.add(curr + 1);
+                queue.push(curr + 1);
+            }
+
+            // i - 1
+            if (curr - 1 >= 0 && !visited.has(curr - 1)) {
+                visited.add(curr - 1);
+                queue.push(curr - 1);
+            }
+
+            // same value
+            if (map.has(arr[curr])) {
+                for (let idx of map.get(arr[curr])) {
+                    if (!visited.has(idx)) {
+                        visited.add(idx);
+                        queue.push(idx);
+                    }
+                }
+                map.delete(arr[curr]);
+            }
+
+            highlight(curr, "visited");
+        }
+
+        steps++;
+    }
+}
+
+function highlight(i, cls) {
+    let el = document.getElementById("box-" + i);
+    el.classList.remove("active");
+    el.classList.add(cls);
+}
+
+function sleep(ms) {
+    return new Promise(res => setTimeout(res, ms));
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!-- Days 4–6: Strings (Interview favorite)
+Reverse string
+Check palindrome
+Count vowels & consonants
+First non-repeating character
+Anagram check
+Longest common prefix
+Remove duplicates from string
+String compression (aaabb → a3b2)
+Valid parentheses
+Longest substring without repeating chars -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Reverse string</h2>
+    <h2>Check palindrome</h2>
+    <h2>Count vowels & consonants</h2>
+    <h2>First non-repeating character</h2>
+    <h2>Anagram check</h2>
+    <h2>Longest common prefix</h2>
+    <h2>Remove duplicates from string</h2>
+    <h2>String compression (aaabb → a3b2)</h2>
+    <h2>Valid parentheses</h2>
+    <h2>Longest substring without repeating characters</h2>
+    
+</body>
+
+<script>
+
+    // reverser string here ============================ 
+
+    // let str = "hello world";
+
+    // let reev = str.split("").reverse().join("");
+    // console.log(reev);
+
+
+    // let newStr = "";
+
+    // for(let i = str.length - 1; i>=0; i--){
+    //     newStr = newStr + str[i];
+    // }
+    // console.log(newStr);
+// ========================================================= 
+
+// check palindrome ===============================
+
+// let str = "racecar";
+
+// let newstr = str.split("").reverse().join("");
+
+// if(str === newstr){
+//     console.log("palindrome");
+// }else{
+//     console.log("not palindrome");
+// }
+
+// ========================================================== 
+
+
+// Count vowels & consonants =============================== 
+
+
+// let str = "hello world";
+
+// let vowels = 0;
+// let consonants = 0;
+
+// for(let i = 0; i<str.length; i++){
+//     let char = str[i].toLowerCase();
+//     if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+//         vowels++;
+//     }else if(char >= "a" && char <= "z"){
+//         consonants++;
+//     }
+// }
+// console.log(vowels);
+// console.log(consonants);
+// ==========================================================
+
+
+// Fiest non repartinf character =============================== 
+
+
+// let str = "hello world";
+
+// let obj = {};
+
+// for(let i = 0; i<str.length; i++){
+//     let char = str[i];
+//     if(obj[char]){
+//         obj[char]++;
+//     }else{
+//         obj[char] = 1;
+//     }
+// }
+
+// for(let key in obj){
+//     if(obj[key] === 1){
+//         console.log(key);
+//         break;
+//     }
+// }
+// ==========================================================
+
+
+// Angram Check ================================== 
+
+// let str2 = "rahul";
+// let str1 = "arvindbhai";
+
+// let newstr1 = str1.split("").sort().join("");
+// let newstr2 = str2.split("").sort().join("");
+
+// if(newstr1 === newstr2){
+//     console.log("Anagram");
+// }else{
+//     console.log("Not Anagram");
+// }
+// ========================================================== 
+
+
+// Remove duplicates from string =============================== 
+
+
+let str = "arvvindaabbhai";
+
+let newstr = "";
+
+for(let i = 0; i<str.length; i++){
+    let char = str[i];
+    if(newstr.indexOf(char) === -1){
+        newstr = newstr + char;
+    }
+}
+console.log(newstr);
+</script>
+</html>

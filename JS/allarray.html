@@ -1,0 +1,202 @@
+<!-- Largest element in array
+Second largest element
+Reverse an array (without inbuilt)
+Check if array is sorted
+Remove duplicates from sorted array
+Move all zeros to end
+Rotate array by k steps
+Find missing number (1 to n)
+Count frequency of elements
+Kadane’s Algorithm (max subarray sum – important) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Largest element in array</h2>
+    <h2>Second largest element</h2>
+    <h2>Reverse an array (without inbuilt)</h2>
+    <h2>Check if array is sorted</h2>
+    <h2>Remove duplicates from sorted array</h2>
+    <h2>Move all zeros to end</h2>
+    <h2>Rotate array by k steps</h2>
+    <h2>Find missing number (1 to n)</h2>
+    <h2>Count frequency of elements</h2>
+    <h2>Kadane’s Algorithm (max subarray sum – important)</h2>
+    <script>
+
+
+// larget Element in array=======================
+        // let arr = [1,2,3,4,5];
+        // let max = arr[0];
+        // let min = arr[0];
+
+        // for(let i =0 ; i<arr.length; i++){
+        //     if(arr[i]>max){
+        //         max = arr[i];
+        //     }else if(arr[i]<min){
+        //         min = arr[i];
+        //     }
+        // }
+        // console.log(max);   
+        // console.log(min);   
+// =============================================================
+
+// Second largest element===========================
+
+// let arr = [1,2,3,4,5];
+
+// let max = arr[0];
+// let secondMax = arr[0];
+// for(let i =0 ; i<arr.length; i++){
+
+//     if(arr[i]>max){
+//         secondMax = max;
+//         max = arr[i];
+//     }else if(arr[i]>secondMax && arr[i]<max){
+//         secondMax = arr[i];
+//     }
+// }
+
+// console.log(max);
+// console.log(secondMax);
+// ============================================================= 
+
+// Reverse an Araay ==============================
+
+// let arr = [1,2,3,4,5];
+
+// for(let i = arr.length-1; i>=0; i--){
+//     console.log(arr[i]);
+// }
+
+
+// =============================================================
+
+
+// Check if array is sorted ==============================
+
+// let arr = [2,3,4,5];
+
+// let new1 = arr.sort();
+// console.log(new1);
+
+// if(arr == new1){
+//     console.log("Array is sorted");
+// }
+// else{
+//     console.log("Array is not sorted");
+// }
+
+// if(new1 === arr){
+//     console.log("Array is sorted");
+// }
+// else{
+//     console.log("Array is not sorted");
+// }
+// ================================================================== 
+
+// Remove Duplicates from sorted array ============================== 
+
+// let arr = [1,1,2,2,3,4,5];
+
+// let newArr = [];
+
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] !== arr[i+1]){
+//         newArr.push(arr[i]);
+//     }
+// }
+// console.log(newArr);
+
+// =================================================================== 
+
+// Move all zeros to end ==============================
+
+// let arr = [0,1,0,3,12];
+
+// let newArr = [];
+
+
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] !== 0){
+//         newArr.push(arr[i]);
+//     }
+// }
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] === 0){
+//         newArr.push(arr[i]);
+//     }
+// }
+// console.log(newArr);
+
+// ===================================================== 
+
+// Rotete array by k steps ============================== 
+
+
+// let arr = [1,2,3,4,5];
+// let k = 3 ;
+// let newArr = [];
+
+// for(let i = arr.length-k;i<arr.length; i++){
+//     newArr.push(arr[i]);
+// }
+
+// for(let i = 0 ; i<arr.length-k; i++){
+//     newArr.push(arr[i]);
+// }
+
+// console.log(newArr);
+
+// ===================================================== 
+
+
+// find missing number (1 to n) ============================== 
+
+// let arr = [1,2,3,5];
+// let n = arr.length + 1;
+// let sum = (n * (n + 1)) / 2;
+// let sum1 = 0;
+// for(let i = 0; i<arr.length; i++){
+//     sum1 = sum1 + arr[i];
+// }
+// let missing = sum - sum1;
+// console.log(missing);
+
+// ===================================================== 
+
+// Count frequency of elements ============================== 
+
+
+let arr = [1,2,2,3,3,3,4];
+
+let frequency = [];
+
+for(let i = 0; i<arr.length; i++){
+    if(frequency[arr[i]]){
+        frequency[arr[i]]++;
+    }
+    else{
+        frequency[arr[i]] = 1;
+    }
+}
+
+for(let i = 0; i<arr.length; i++){
+    console.log(arr[i] + " occurs " + frequency[arr[i]] + " times");
+}
+
+// =====================================================
+
+
+
+
+    </script>
+</body>
+</html>

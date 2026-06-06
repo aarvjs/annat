@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTGeats - Authentic Home Food in India</title>
+    <meta name="description" content="JTGeats is a premium home food delivery service in India. Order fresh, authentic home-cooked meals prepared with love.">
+    <!-- Google Font: Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#home" class="logo" aria-label="JTGeats Home">
+                <span class="logo-bold">JTG</span><span class="logo-light">eats</span>
+            </a>
+            
+            <nav class="nav" id="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="icon-btn search-trigger" aria-label="Search website" id="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button class="icon-btn cart-trigger" aria-label="Shopping Cart" id="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button class="hamburger-menu" id="hamburger-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Authentic Home food in India</h1>
+                    <p class="hero-desc">JTGeats is a popular vertical product delivery system where home-cooked food is delivered to consumers.</p>
+                    <form class="hero-search-form" id="hero-search" aria-label="Search dishes">
+                        <input type="text" placeholder="Search food items..." required class="search-input" aria-label="Food search term">
+                        <button type="submit" class="btn btn-search">Search</button>
+                    </form>
+                </div>
+                <div class="hero-image-container">
+                    <img src="assets/images/hero_chef.png" alt="Friendly home chef preparing delicious food in a kitchen illustration" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Kitchen Grid Section -->
+        <section id="menu" class="home-kitchen">
+            <div class="container">
+                <h2 class="section-title">Home Kitchen</h2>
+                <div class="menu-grid">
+                    <!-- Card 1 -->
+                    <article class="menu-card" data-id="1">
+                        <div class="card-img-wrapper">
+                            <span class="badge badge-discount">50% off</span>
+                            <img src="assets/images/pizza_premium.png" alt="Fresh baked Pepperoni Pizza" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Home made pizza</h3>
+                                <span class="card-price">$19.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.7 <span class="rating-count">(50+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Home made pizza to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="menu-card" data-id="2">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/pasta_premium.png" alt="Gourmet Spaghetti Marinara" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Home made pasta</h3>
+                                <span class="card-price">$15.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.6 <span class="rating-count">(40+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Home made pasta to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="menu-card" data-id="3">
+                        <div class="card-img-wrapper">
+                            <span class="badge badge-yellow">Popular</span>
+                            <img src="assets/images/roasted_chicken.png" alt="Succulent Roast Chicken" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Golden roast chicken</h3>
+                                <span class="card-price">$22.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.8 <span class="rating-count">(60+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Golden roast chicken to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="menu-card" data-id="4">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/indian_curry.png" alt="Aromatic Chicken Tikka Masala" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Spicy chicken tikka</h3>
+                                <span class="card-price">$18.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.9 <span class="rating-count">(80+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Spicy chicken tikka to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="menu-card" data-id="5">
+                        <div class="card-img-wrapper">
+                            <span class="badge badge-discount">20% off</span>
+                            <img src="assets/images/pizza_premium.png" alt="Veggie Supreme Pizza" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Veggie supreme pizza</h3>
+                                <span class="card-price">$20.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.5 <span class="rating-count">(30+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Veggie supreme pizza to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="menu-card" data-id="6">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/pasta_premium.png" alt="Creamy Fettuccine Alfredo" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Creamy fettuccine</h3>
+                                <span class="card-price">$16.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.7 <span class="rating-count">(45+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Creamy fettuccine to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="menu-card" data-id="7">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/roasted_chicken.png" alt="Tandoori Oven Roasted Chicken" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Tandoori roast chicken</h3>
+                                <span class="card-price">$24.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.8 <span class="rating-count">(55+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Tandoori roast chicken to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="menu-card" data-id="8">
+                        <div class="card-img-wrapper">
+                            <span class="badge badge-yellow">Best Seller</span>
+                            <img src="assets/images/indian_curry.png" alt="Rich Butter Chicken Masala" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Butter chicken masala</h3>
+                                <span class="card-price">$19.50</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.9 <span class="rating-count">(95+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Butter chicken masala to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 -->
+                    <article class="menu-card" data-id="9">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/pizza_premium.png" alt="Classic Margherita Pizza" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Margherita pizza</h3>
+                                <span class="card-price">$17.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.6 <span class="rating-count">(50+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Margherita pizza to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 10 -->
+                    <article class="menu-card" data-id="10">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/pasta_premium.png" alt="Fresh Pesto Penne Pasta" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Pesto penne pasta</h3>
+                                <span class="card-price">$14.50</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.7 <span class="rating-count">(38+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Pesto penne pasta to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 11 -->
+                    <article class="menu-card" data-id="11">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/roasted_chicken.png" alt="Garlic Herb Roast Chicken" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Garlic herb chicken</h3>
+                                <span class="card-price">$21.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.7 <span class="rating-count">(42+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Garlic herb chicken to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 12 -->
+                    <article class="menu-card" data-id="12">
+                        <div class="card-img-wrapper">
+                            <span class="badge badge-discount">10% off</span>
+                            <img src="assets/images/indian_curry.png" alt="Spicy Lamb Curry" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title-row">
+                                <h3 class="card-title">Spicy lamb curry</h3>
+                                <span class="card-price">$23.00</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                    <span class="rating-text">4.8 <span class="rating-count">(49+ ratings)</span></span>
+                                </div>
+                                <button class="add-to-cart-btn" aria-label="Add Spicy lamb curry to cart">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Items Section (Carousel) -->
+        <section class="popular-items-section">
+            <div class="container">
+                <h2 class="section-title text-center">Popular Items</h2>
+                
+                <div class="carousel-wrapper">
+                    <!-- Left Arrow Button -->
+                    <button class="carousel-nav-btn prev" id="carousel-prev" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    
+                    <!-- Carousel Window / Container -->
+                    <div class="carousel-viewport" id="carousel-viewport">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Slide 1 -->
+                            <article class="menu-card carousel-slide" data-id="1">
+                                <div class="card-img-wrapper">
+                                    <span class="badge badge-discount">50% off</span>
+                                    <img src="assets/images/pizza_premium.png" alt="Fresh baked pizza slide" class="card-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title-row">
+                                        <h3 class="card-title">Home made pizza</h3>
+                                        <span class="card-price">$19.00</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-rating">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                            <span class="rating-text">4.7 <span class="rating-count">(50+ ratings)</span></span>
+                                        </div>
+                                        <button class="add-to-cart-btn" aria-label="Add Home made pizza to cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Slide 2 -->
+                            <article class="menu-card carousel-slide" data-id="3">
+                                <div class="card-img-wrapper">
+                                    <span class="badge badge-yellow">Best Seller</span>
+                                    <img src="assets/images/roasted_chicken.png" alt="Golden roast chicken slide" class="card-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title-row">
+                                        <h3 class="card-title">Golden roast chicken</h3>
+                                        <span class="card-price">$22.00</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-rating">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                            <span class="rating-text">4.8 <span class="rating-count">(60+ ratings)</span></span>
+                                        </div>
+                                        <button class="add-to-cart-btn" aria-label="Add Golden roast chicken to cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Slide 3 -->
+                            <article class="menu-card carousel-slide" data-id="4">
+                                <div class="card-img-wrapper">
+                                    <img src="assets/images/indian_curry.png" alt="Spicy chicken tikka slide" class="card-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title-row">
+                                        <h3 class="card-title">Spicy chicken tikka</h3>
+                                        <span class="card-price">$18.00</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-rating">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                            <span class="rating-text">4.9 <span class="rating-count">(80+ ratings)</span></span>
+                                        </div>
+                                        <button class="add-to-cart-btn" aria-label="Add Spicy chicken tikka to cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Slide 4 -->
+                            <article class="menu-card carousel-slide" data-id="2">
+                                <div class="card-img-wrapper">
+                                    <img src="assets/images/pasta_premium.png" alt="Home made pasta slide" class="card-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title-row">
+                                        <h3 class="card-title">Home made pasta</h3>
+                                        <span class="card-price">$15.00</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-rating">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                            <span class="rating-text">4.6 <span class="rating-count">(40+ ratings)</span></span>
+                                        </div>
+                                        <button class="add-to-cart-btn" aria-label="Add Home made pasta to cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Slide 5 -->
+                            <article class="menu-card carousel-slide" data-id="8">
+                                <div class="card-img-wrapper">
+                                    <span class="badge badge-yellow">Best Seller</span>
+                                    <img src="assets/images/indian_curry.png" alt="Butter chicken masala slide" class="card-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title-row">
+                                        <h3 class="card-title">Butter chicken masala</h3>
+                                        <span class="card-price">$19.50</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-rating">
+                                            <span class="star-icon" aria-hidden="true">&#9733;</span>
+                                            <span class="rating-text">4.9 <span class="rating-count">(95+ ratings)</span></span>
+                                        </div>
+                                        <button class="add-to-cart-btn" aria-label="Add Butter chicken masala to cart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Arrow Button -->
+                    <button class="carousel-nav-btn next" id="carousel-next" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+
+                <!-- Carousel Dots Pagination -->
+                <div class="carousel-dots" id="carousel-dots" aria-label="Carousel pagination">
+                    <!-- Dots generated by JS -->
+                </div>
+
+                <div class="request-dish-wrapper">
+                    <button class="btn btn-primary" id="request-dish-btn">Request a dish</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Feature Section ("We are providing best home cooked food delivery service.") -->
+        <section id="about" class="video-service-section">
+            <div class="container text-center">
+                <h2 class="video-section-title">We are providing best<br>home cooked food delivery service.</h2>
+                <p class="video-section-desc">Delivering delicious food that keeps your health in check. We have 10+ years of experience in food service, ensuring hygienic prep and warm delivery right to your doorstep.</p>
+                
+                <div class="video-wrapper">
+                    <div class="video-preview-card">
+                        <img src="assets/images/video_thumbnail.png" alt="Delicious ingredients cooking in a kitchen" class="video-thumbnail">
+                        <button class="video-play-btn" id="play-video-btn" aria-label="Play video about our delivery service">
+                            <span class="play-icon-shape"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Seller Form Section -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-text-content">
+                    <h2 class="contact-title">Do you have a question<br>or want to become a seller?</h2>
+                    <p class="contact-desc">Submit your query here. We will get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name" class="sr-only">Your Name</label>
+                                <input type="text" id="form-name" class="form-control" placeholder="Your Name" required>
+                                <span class="error-msg" id="name-error">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" class="sr-only">Your Email</label>
+                                <input type="email" id="form-email" class="form-control" placeholder="Your Email" required>
+                                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message" class="sr-only">Your Message</label>
+                            <textarea id="form-message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <span class="error-msg" id="message-error">Please enter your message</span>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Send</button>
+                    </form>
+                </div>
+                
+                <div class="contact-illustration-container">
+                    <div class="illustration-bg-circle"></div>
+                    <img src="assets/images/delivery_guy.png" alt="Delivery professional on scooter illustration" class="contact-illustration">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo footer-logo" aria-label="JTGeats Home">
+                    <span class="logo-bold">JTG</span><span class="logo-light">eats</span>
+                </a>
+                <p class="footer-about">Fresh home cooked food delivered warm and clean at your doorstep.</p>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Social</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JTGeats. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay" tabindex="-1" data-close></div>
+        <div class="modal-container video-modal-container">
+            <button class="modal-close" data-close aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <div class="video-aspect-ratio">
+                    <video id="service-video" controls preload="none" poster="assets/images/video_thumbnail.png">
+                        <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-cooking-a-fresh-vegetable-dish-in-slow-motion-41804-large.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request a Dish Modal -->
+    <div class="modal" id="request-modal" aria-hidden="true" role="dialog" aria-labelledby="request-modal-title">
+        <div class="modal-overlay" tabindex="-1" data-close></div>
+        <div class="modal-container">
+            <button class="modal-close" data-close aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title" id="request-modal-title">Request a Custom Dish</h3>
+                <p class="modal-subtitle">Can't find your favorite home-cooked dish? Let us know what you'd like, and our home kitchens will make it for you!</p>
+                <form class="request-form" id="request-form" novalidate>
+                    <div class="form-group">
+                        <label for="req-dish-name">Dish Name</label>
+                        <input type="text" id="req-dish-name" class="form-control" placeholder="e.g. Handmade Paneer Butter Masala" required>
+                        <span class="error-msg" id="req-dish-name-error">Please specify the dish name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-dish-desc">Special Instructions / Ingredients</label>
+                        <textarea id="req-dish-desc" class="form-control" rows="3" placeholder="e.g. Less spicy, vegan, extra gravy..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-name">Your Name</label>
+                        <input type="text" id="req-name" class="form-control" placeholder="Your Name" required>
+                        <span class="error-msg" id="req-name-error">Please enter your name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-phone">Phone Number</label>
+                        <input type="tel" id="req-phone" class="form-control" placeholder="Your Phone Number" required>
+                        <span class="error-msg" id="req-phone-error">Please enter a valid phone number</span>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal / Drawer -->
+    <div class="modal" id="search-modal" aria-hidden="true" role="dialog" aria-labelledby="search-modal-title">
+        <div class="modal-overlay" tabindex="-1" data-close></div>
+        <div class="modal-container search-modal-container">
+            <button class="modal-close" data-close aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title" id="search-modal-title">Search Menu</h3>
+                <form class="modal-search-form" id="modal-search-form">
+                    <input type="text" id="modal-search-input" class="form-control search-field" placeholder="What are you craving today?" required>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+                <div class="search-results-placeholder">
+                    <p class="search-hint">Try searching for: "pizza", "pasta", "chicken", "curry"</p>
+                    <div class="search-results-list" id="search-results-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal / Drawer -->
+    <div class="modal" id="cart-modal" aria-hidden="true" role="dialog" aria-labelledby="cart-modal-title">
+        <div class="modal-overlay" tabindex="-1" data-close></div>
+        <div class="modal-container cart-modal-container">
+            <button class="modal-close" data-close aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h3 class="modal-title" id="cart-modal-title">Your Food Basket</h3>
+                <div class="cart-items-container" id="cart-items">
+                    <p class="empty-cart-message">Your basket is currently empty.</p>
+                </div>
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <div class="cart-total-row">
+                        <span>Total:</span>
+                        <span class="cart-total-price" id="cart-total-price">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
